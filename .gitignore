@@ -1,0 +1,13 @@
+# Ignorar binários compilados (bytecodes)
+*.class
+
+# Ignorar pastas de build geradas pelo VS Code
+bin/
+lib/
+
+# Ignorar configurações locais do editor
+.vscode/
+
+# Ignorar arquivos temporários do sistema
+.DS_Store
+Thumbs.db
