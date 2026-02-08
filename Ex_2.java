@@ -68,7 +68,7 @@ public class Ex_2 {
                                                                        // primeira posição(9) e assim por diante (8,7...)
 
                 posicaoD = (entrada.length() - i); // Converte o índice do Java (esq -> dir) para a posição do Luhn (dir -> esq).
-                                                   // Ex: Num total de 10, o índice 9 vira posição 1 (ímpar, mantém). O índice 8 vira 2 (par, dobra)
+                                                   // Ex: Num total de 10, o índice 9 vira posição 1 (ímpar, mantém). O índice 8 vira 2(posição 2) (par, dobra)
                                                    // -> 10 - 9 = 1; 10 - 8 = 2; 10 - 7 = 3... |o "resto" da subtração é a "posicaoD"|.
                                                    // Se (posicaoD % 2 == 0), estamos numa posição par vindo da direita, então dobramos.
                 if (posicaoD % 2 == 0) {
