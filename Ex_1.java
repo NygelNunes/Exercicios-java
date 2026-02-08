@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Ex_1 {
     public static void main(String[] args){
-        System.out.print("\nEscreva quantos numeros quiser e a condição de parada é preciso digitar (parar = -1)! \n");
+        System.out.print("\nEscreva quantos numeros quiser e a condição de parada é preciso digitar | -1 | \n");
 
         float i = 0;
         float maior = 0;
