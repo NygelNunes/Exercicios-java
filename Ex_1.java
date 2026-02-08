@@ -1,5 +1,5 @@
 /*
-Você precisa desenvolver um sistema que permita o usuário digitar vários números inteiros, 
+Você precisa desenvolver um sistema que permita o usuário digitar vários números, 
 positivos ou negativos. Ao final, quando o usuário digita o valor -1, o programa deve calcular e 
 exibir: 
     ○ A quantidade de números digitados pelo usuário; 
