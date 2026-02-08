@@ -63,8 +63,8 @@ public class Ex_2 {
                     break;
                 }
                 
-                digito = Character.getNumericValue(entrada.charAt(i)); // Aqui é feito a conversão De um caracter para
-                                                                       // um valor numérico(entrada.charAt(i) -> Essa parte pega um caracter(Char) que está na
+                digito = Character.getNumericValue(entrada.charAt(i)); // <- Aqui é feito a conversão De um caracter para
+                                                                       // um valor numérico. (entrada.charAt(i) -> Essa parte pega um caracter(Char) que está na
                                                                        // primeira posição(9) e assim por diante (8,7...)
 
                 posicaoD = (entrada.length() - i); // Converte o índice do Java (esq -> dir) para a posição do Luhn (dir -> esq).
