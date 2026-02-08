@@ -21,15 +21,42 @@ import java.util.Scanner;
 
 public class Ex_3 {
     public static void main(String[] args) {
+        System.out.print("\nDNA (Padrão: A - 'adenosina' C - 'citosina' T - 'timina' G - 'guanina' |ATCG|) \n");
         Scanner scan = new Scanner(System.in);
-        System.out.print("Fita 1 do DNA:");
+        System.out.print("Fita 1: ");
         String fita1 = scan.nextLine();
         fita1 = fita1.replace(" ", "");
-        System.out.print("Fita 2 do DNA:");
+        System.out.print("Fita 2: ");
         String fita2 = scan.nextLine();
         fita2 = fita2.replace(" ", "");
 
+        int contDistancia = 0;
+        Boolean diferenteLetra = true; // Essa variável foi criada somente para fazer um comparativo e não deixar imprimir informações de regras de negocios invalidos
 
-        
+        if (fita1.length() == fita2.length()) {
+            for (int i = 0; i < fita1.length(); i++) {
+
+                char letras1 = fita1.charAt(i);
+                char letras2 = fita2.charAt(i);
+                
+                if ((letras1 != 'A' && letras1 != 'C' && letras1 != 'G' && letras1 != 'T') || (letras2 != 'A' && letras2 != 'C' && letras2 != 'G' && letras2 != 'T')) { 
+                    diferenteLetra = false;
+                    System.out.print("\nERROR - ALGUMA LETRA INCOMPATIVEL COM O PADRÃO DO DNA!\n\n");
+                    break;
+                }
+
+                if (letras1 != letras2) {
+                    contDistancia = contDistancia + 1;
+                }
+            }
+            if (diferenteLetra == true) {
+                System.out.print("\nA distância de Hamming é: " + contDistancia + "\n\n");
+            }
+            
+
+        } else {
+            System.out.print("\nERROR - Fitas com tamanhos diferentes!\n\n");
+        }
+
     }
 }

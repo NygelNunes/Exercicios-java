@@ -32,7 +32,8 @@ public class Ex_2 {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.print("Digite:");
+        System.out.print("\nVerificar se está de acordo com a fórmula de LUHN..\n");
+        System.out.print("Digite: ");
         String entrada = scan.nextLine(); // Sem o "Line" o Java ia parar de ler no primeiro espaço " "..
         entrada = entrada.replace(" ", ""); // Formatação sem espaços " "..
 
@@ -43,9 +44,9 @@ public class Ex_2 {
         boolean entradavalida = true; // Essa variável foi criada somente para fazer um comparativo e não deixar imprimir informações de regras de negocios invalidos
 
 
-// Essa parte se trata da regra de negócio já que se a quantidade de dígitos for inferior ou igual a 1, o sistema não continua...
+        // Essa parte se trata da regra de negócio já que se a quantidade de dígitos for inferior ou igual a 1, o sistema não continua...
         if (entrada.length() <= 1) {
-            System.out.print("Está Qtd de caracteres é INVALIDA!");
+            System.out.print("\nEstá Qtd de caracteres é INVALIDA!\n\n");
         } else {
 
         // Aqui a lógica Padrão do For foi alterada, já que o for se trata da contabilização da esquerda para a direita!
@@ -57,7 +58,7 @@ public class Ex_2 {
 
                 // Outra regra de negócio que determina se o caracter é um dígito, se não for ele para/break o loop ali mesmo
                 if (Character.isDigit(entrada.charAt(i)) == false) {
-                    System.out.print("Letras ou Simbolos NAO SAO PERMITIDOS!\n");
+                    System.out.print("\nLetras ou Simbolos NAO SAO PERMITIDOS!\n\n");
                     entradavalida = false; 
                     break;
                 }
@@ -76,6 +77,7 @@ public class Ex_2 {
                         dobrar = dobrar - 9;
                     }
                     somaTotal = somaTotal + dobrar;
+
                 } else {
                     somaTotal = somaTotal + digito;
                 }
@@ -84,11 +86,11 @@ public class Ex_2 {
 
             if ( entradavalida == true) {
                 if (somaTotal % 10 == 0) {
-                    System.out.print("Este numero é valido!\n");
+                    System.out.print("\nEste numero é VALIDO!\n");
                 } else {
-                    System.out.print("Este numero é invalido!\n");
+                    System.out.print("Este numero é INVALIDO!\n");
                 }
-                System.out.print("Soma Total: " + somaTotal);
+                System.out.print("Soma Total: " + somaTotal + "\n\n");
             }
         }
     }

@@ -1,4 +1,3 @@
-import java.util.Scanner;
 /*
 Você precisa desenvolver um sistema que permita o usuário digitar vários números inteiros, 
 positivos ou negativos. Ao final, quando o usuário digita o valor -1, o programa deve calcular e 
@@ -9,8 +8,12 @@ exibir:
     ○ A média dos números digitados; 
 Para esse exercício você NÃO deve trabalhar com vetores ou ArrayList. 
 */
+
+import java.util.Scanner;
+
 public class Ex_1 {
     public static void main(String[] args){
+        System.out.print("\nEscreva quantos numeros quiser e a condição de parada é preciso digitar (parar = -1)! \n");
 
         float i = 0;
         float maior = 0;
@@ -20,7 +23,7 @@ public class Ex_1 {
 
         for(;;){
             Scanner scan = new Scanner(System.in);
-            System.out.print("Digite (parar = -1):" );
+            System.out.print("Digite: " );
             String entrada = scan.next();
             float numero = Float.parseFloat(entrada);
             
