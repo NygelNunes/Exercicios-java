@@ -51,10 +51,9 @@ As cadeias de DNA são representadas pelas letras **C, A, G e T**.
 Dadas as duas fitas abaixo:
 
 ```text
-GAGCCTACTAACGGGAT
-CATCGTAATGACGGCCT
-^ ^ ^ ^   ^ ^  ^
-
+G A G C C T A C T A A C G G G A T 
+C A T C G T A A T G A C G G C C T 
+^   ^   ^     ^   ^         ^ ^  
 ```
 
 * Neste caso, existem **7 diferenças**, portanto, a distância de Hamming é **7**.
